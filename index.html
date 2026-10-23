@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NASA Health Monitoring System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="astronauts.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="app">
+    <aside class="side">
+      <div class="side-brand">
+        <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M5 17h6l3-7 4 13 3-6h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Crew Health</span>
+      </div>
+
+      <nav id="nav" aria-label="Sections">
+        <button type="button" data-view="astronauts">Astronauts</button>
+        <button type="button" data-view="summary">Summary</button>
+        <button type="button" data-view="vitals">Vitals</button>
+        <button type="button" data-view="checkup">Weekly check-up</button>
+        <button type="button" data-view="records">Earth records</button>
+      </nav>
+
+      <p class="side-foot">Demo data. Every reading and name here is made up.</p>
+    </aside>
+
+    <div class="content">
+      <header class="top">
+        <h1>NASA Health Monitoring System</h1>
+        <div class="top-right">
+          <span class="clock" id="clock" aria-live="off">Waiting for first reading</span>
+          <button type="button" class="who" id="who"></button>
+        </div>
+      </header>
+
+      <main id="main" tabindex="-1">
+
+        <!-- 1. ASTRONAUTS PAGE (teammate: this section is yours) -->
+        <section id="view-astronauts" class="panel" hidden>
+          <h2>Astronauts</h2>
+
+          <!-- ===== START: write your HTML below this line ===== -->
+          <div id="astronauts-content">
+            <p>The Astronauts page is empty. Replace this paragraph with your own HTML.</p>
+
+            <!-- Temporary test button so the rest of the app can be tried. Delete it when you are done. -->
+            <button type="button" class="btn" onclick="chooseAstronaut(1)">Test: open astronaut 1</button>
+          </div>
+          <!-- ===== END: write your HTML above this line ===== -->
+
+        </section>
+
+        <!-- 2. Summary -->
+        <section id="view-summary" class="panel" hidden>
+          <h2>Summary</h2>
+          <div id="summary"></div>
+        </section>
+
+        <!-- 3. Vitals -->
+        <section id="view-vitals" class="panel" hidden>
+          <h2>Vitals</h2>
+          <div id="vitals"></div>
+        </section>
+
+        <!-- 4. Weekly check-up -->
+        <section id="view-checkup" class="panel" hidden>
+          <h2>Weekly check-up</h2>
+          <div id="checkup"></div>
+        </section>
+
+        <!-- 5. Records sent back to Earth -->
+        <section id="view-records" class="panel" hidden>
+          <h2>Earth records</h2>
+          <div id="records"></div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <!-- Scripts run top to bottom, so keep this order. -->
+  <script src="./js/data.js"></script>
+  <script src="./js/summary.js"></script>
+  <script src="./js/vitals.js"></script>
+  <script src="./js/checkup.js"></script>
+  <script src="./js/records.js"></script>
+  <script src="astronauts.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

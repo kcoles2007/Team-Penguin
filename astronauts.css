@@ -1,0 +1,23 @@
+/* astronauts.css: styles for the Astronauts page ONLY.
+   Write your CSS here so you do not need to touch styles.css.
+
+   Colours you can reuse (already defined in styles.css):
+     var(--bg)      main blue background
+     var(--bg-2)    slightly lighter blue (cards)
+     var(--yellow)  main accent / headings
+     var(--border)  white border
+     var(--text)    normal text
+     var(--ok)  var(--watch)  var(--alert)   green / yellow / red status colours
+
+   Ready-made classes you can use in your HTML:
+     class="card"    a bordered box
+     class="btn"     a yellow button
+     class="avatar"  a round circle for initials or a photo
+     class="pill st-ok"  (or st-watch, st-alert)  a small status label
+
+   Example (delete the comment marks to try it):
+   #astronauts-content .my-box {
+     border: 2px solid var(--border);
+     padding: 1rem;
+   }
+*/
